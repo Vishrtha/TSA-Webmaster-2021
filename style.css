@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#navbar{
+    color: white;
+    background-color: #096484;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+
+#main-header{
+    /*color: white;*/
+    padding: 20px;
+    display: inline-block;
+}
+
+#navbar-pages{
+    /*color: white;*/
+    text-transform: uppercase;
+    float: right;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+#navbar-pages li{
+    padding-right: 40px;
+    display: inline-block;
+}
+
+#navbar-pages a{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#navbar-pages a:hover{
+    border: 2px solid white;
+    padding: 5px;
+}
+
+#pricing-title{
+    padding: 70px;
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+    color: gray;
+}
+
+#table{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+}
+
+#table td, th{
+    padding: 10px;
+}
+
+#faq{
+    padding: 70px;
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+    color: gray;
+}
+
+#faq-qs li{
+    margin-left: 25%;
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+#faq-qs{
+    padding-bottom: 40px;
+}
+
+#main-footer{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #096484;
+    color: white;
+    font-size: 13px;
+}
