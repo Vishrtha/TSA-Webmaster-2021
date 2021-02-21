@@ -7,48 +7,55 @@
     <body>
         <div id="navbar">
             <header id="main-header">
-                <div class="container">
-                    <h1>MedExpress</h1>
+                <div class="title">
+                    <h1><a id="name" href="pricing.html">MedExpress</a></h1>
                 </div>
             </header>
 
             <nav id="navbar-pages">
-                <div class="container">
+                <div class="pages">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Sources</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="sources.html">Sources</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
 
-        <div id="pricing-title">
-            <h1>Pricing</h1>
+        <div id="pricing-top">
+            <img src="images/pricingbg4.jpg" style="width:100%; height:400px;">
+            <div id="img-text">Choose a plan that's right for you</div>
         </div>
 
         <div id="pricing-table">
-        <table id="table" border="1" cellpadding="10" cellspacing="0">
+        <table id="table" cellpadding="10" cellspacing="20px">
             <thead>
                 <tr>
                     <th> </th>
-                    <th>Standard<br>($50 per month)<br><button>Select</button></th>
-                    <th>Premium<br>($150 per month)<br><button>Select</button></th>
+                    <th id="standard"><br>Standard<br><br><br>
+                        <div style="font-size:40px;">$50/month</div><br><br>
+                        <a id="button-s" href="billing-s.html">Select</a><br><br>
+                    </th>
+                    <th id="premium"><br>Premium<br><br><br>
+                        <div style="font-size:40px;">$150/month</div><br><br>
+                        <a id="button-p" href="billing-p.html">Select</a><br><br>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Regular Checkups</td>
-                    <td><a><img src="images/bluecheck.png" alt="check"></a></td>
-                    <td><a><img src="images/bluecheck.png" alt="check"></a></td>
+                    <td><a id="checks"><img src="images/bluecheck.png" alt="check"></a></td>
+                    <td><a id="checks"><img src="images/bluecheck.png" alt="check"></a></td>
                 </tr>
                 <tr>
                     <td>Therapy</td>
-                    <td><a><img src="images/bluecheck.png" alt="check"></a></td>
-                    <td><a><img src="images/bluecheck.png" alt="check"></a></td>
+                    <td><a id="checks"><img src="images/bluecheck.png" alt="check"></a></td>
+                    <td><a id="checks"><img src="images/bluecheck.png" alt="check"></a></td>
                 </tr>
                 <tr>
                     <td>Physical Therapy</td>
@@ -70,30 +77,52 @@
         </div>
 
         <div id="faq">
-            <h1>FAQs About Pricing</h1>
+            <h1>FAQ About Pricing</h1>
         </div>
 
         <div id="faq-qs">
-            <ul>
-                <li>Can I change my pricing plan?
-                    <ul>
-                        <li>Yes, you can change it at any given time once the month your paying for is over</li>
-                    </ul>
-                </li>
-                <li>Can I cancel my plan at any time?
-                    <ul>
-                        <li>Of course, you can cancel your plan after paying for the current month</li>
-                    </ul>
-                </li>
-                <li>What are my payment options
-                    <ul>
-                        <li>You are billed monthly, and we accept debit and credit cards</li>
-                    </ul>
-                </li>
-            </ul>
+            <button type="button" class="collapsible">Can I change my pricing plan?</button>
+            <div class="content">
+                <p>Yes, you can change it at any given time once the month your paying for is over</p>
+            </div>
+
+            <button type="button" class="collapsible">Can I cancel my plan at any time?</button>
+            <div class="content">
+                <p>Of course, you can cancel your plan after paying for the current month</p>
+            </div>
+
+            <button type="button" class="collapsible">What are my payment options?</button>
+            <div class="content">
+                <p>You are billed monthly, and we accept debit and credit cards</p>
+            </div>
         </div>
+
+        <div id="healthcare-imgs">
+            <img src="images/aetna.jpg" alt="Aetna" width="200px">
+            <img src="images/anthem.jpg" alt="Anthem Blue Cross Blue Shield" width="200px">
+            <img src="images/cigna.jpg" alt="Cigna" width="200px">
+            <img src="images/united.jpg" alt="United Healthcare" width="200px">
+        </div>
+
         <footer id="main-footer">
             <p>Copyright &copy; 2021, MedExpress</p>
         </footer>
     </body>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
 </html>

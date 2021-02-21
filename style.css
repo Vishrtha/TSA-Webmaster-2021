@@ -9,8 +9,7 @@ body{
 
 #navbar{
     color: white;
-    background-color: #096484;
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    background-color: #52accc;
 }
 
 #main-header{
@@ -19,12 +18,22 @@ body{
     display: inline-block;
 }
 
+#name{
+    text-decoration: none;
+    color: white;
+}
+
+#name a:visited{
+    color: white;
+}
+
 #navbar-pages{
     /*color: white;*/
     text-transform: uppercase;
     float: right;
     padding: 20px;
     padding-top: 30px;
+    padding-bottom: 0px;
 }
 
 #navbar-pages li{
@@ -43,28 +52,72 @@ body{
     padding: 5px;
 }
 
-#pricing-title{
-    padding: 70px;
-    padding-bottom: 30px;
+#pricing-top{
+    position: relative;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 15px;
-    color: gray;
+    color: white;
+}
+
+#img-text{
+    color: #52accc;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #table{
+    padding-top: 40px;
     margin-left: auto;
     margin-right: auto;
     font-size: 17px;
+    width: 1000px;
 }
 
 #table td, th{
-    padding: 10px;
+    padding: 20px;
+}
+
+tr td:nth-child(2){
+    text-align: center;
+}
+
+tr td:nth-child(3){
+    text-align: center;
+}
+
+#standard{
+    background-color: #F9F4EC;
+    color: #26D52A;
+}
+
+#premium{
+    background-color: #F9F4EC;
+    color: #F2A724;
+}
+
+#button-s, #button-p{
+    border-radius: 8px;
+    background-color: #52accc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    text-decoration: none;
+}
+
+#button-s:hover{
+    background: #26D52A;
+    color: #fff;
+}
+
+#button-p:hover{
+    background: #F2A724;
+    color: #fff;
 }
 
 #faq{
-    padding: 70px;
+    padding-top: 100px;
     padding-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
@@ -73,21 +126,257 @@ body{
     color: gray;
 }
 
-#faq-qs li{
-    margin-left: 25%;
-    font-size: 17px;
-    padding-bottom: 10px;
-}
+.collapsible {
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 1000px;
+    border: none;
+    text-align: left;
+    outline: dotted;
+    font-size: 15px;
+    transform: translateX(25%);
+  }
+  
+.active, .collapsible:hover{
+    background-color: #555;
+  }
+  
+.collapsible:after{
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+.active:after{
+    content: "\2212";
+  }
+  
+.content{
+    padding: 0 0px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+    width: 1000px;
+    transform: translateX(25%);
+  }
 
-#faq-qs{
-    padding-bottom: 40px;
+#healthcare-imgs{
+    margin-top: 150px;
+    display: inline-block;
+    transform: translateX(41%);
+    justify-content: space-evenly;
 }
 
 #main-footer{
+    margin-top: 100px;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    background-color: #096484;
+    background-color: #52accc;
     color: white;
     font-size: 13px;
 }
+
+#billInfo{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+    color: gray;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    padding-left: 25%;
+  }
+  
+  input[type=text] {
+    width: 75%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 75%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+
+  hr{
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  
+  select{
+      border: none;
+      outline: none;
+      font-size: 20px;
+  }
+
+  #textDiv{
+    font-size:20px;
+    font-weight: bold;
+    display: block;
+    float: right;
+    margin-right: 25%;
+  }
+
+#research-title{
+    padding-top: 100px;
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    font-size: 15px;
+    color: gray;
+}
+
+#researchsrc{
+    padding-left: 25%;
+    padding-bottom: 10px;
+}
+
+#image-title{
+    padding-top: 100px;
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    font-size: 15px;
+    color: gray;
+}
+
+#imagesrc{
+    padding-left: 25%;
+    padding-bottom: 10px;
+}
+
+#docs {
+    display: flex;
+    margin-top: 5px;
+}
+
+.docCircles {
+    width: 20%;
+    border-radius: 50%;
+  
+    background: #74b6ce;
+   
+    line-height: 0;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+   
+.docCircles::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+   
+.circle-txt {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+  }
+
+.docRects {
+    width: 750px;
+    height: 300px;
+    border-radius: 0%;
+    
+    border: 3px solid #74b6ce;
+
+    line-height: 0;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+   
+.docRects::after {
+    content: "";
+    display: block;
+    padding-bottom: 10%;
+  }
+   
+.rect-txt {
+    position: flex;
+    line-height: 30px;
+    padding-top: 15%;    
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    font-size: medium;
+  }
