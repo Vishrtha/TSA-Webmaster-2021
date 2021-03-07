@@ -1,0 +1,156 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#navbar{
+    color: white;
+    background-color: #52accc;
+}
+
+#main-header{
+    /*color: white;*/
+    padding: 20px;
+    display: inline-block;
+}
+
+#name{
+    text-decoration: none;
+    color: white;
+}
+
+#name a:visited{
+    color: white;
+}
+
+#navbar-pages{
+    /*color: white;*/
+    text-transform: uppercase;
+    float: right;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+
+#navbar-pages li{
+    padding-right: 40px;
+    display: inline-block;
+}
+
+#navbar-pages a{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#navbar-pages a:hover{
+    border: 2px solid white;
+    padding: 5px;
+}
+
+.conatiner{
+
+    /*allows for the window to be adjustable*/
+    width:90%;
+    margin:auto;
+}
+
+
+#docs {
+    display: flex;
+}
+
+.docCircles {
+    width: 300px;
+    border-radius: 50%;
+  
+    background: #74b6ce;
+    
+    padding-left: 40px;
+    line-height: 0;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+   
+.circle-txt {
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+  }
+
+.docRects {
+    width: 750px;
+    height: 300px;
+    border-radius: 0%;
+    
+    border: 3px solid #74b6ce;
+
+    line-height: 0;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+   
+
+  #main-footer{
+    margin-top: 100px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #52accc;
+    color: white;
+    font-size: 13px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 750px;
+  height: 300px;
+  perspective: 1000px;
+
+  padding-top: 60px;
+  padding-left: 40px; 
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #03AC13;
+  color: white;
+}
+
+.flip-box-back {
+  background-color: #ff6600;
+  color: white;
+  transform: rotateX(180deg);
+}
